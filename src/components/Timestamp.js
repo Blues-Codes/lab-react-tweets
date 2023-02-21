@@ -1,15 +1,9 @@
-import React from 'react';
 
-function TimeStamp (time){
+
+function Timestamp(props) {
     return (
-        <div className='timestamp'>
-            <p>
-            {props.tweet.TimeStamp}
-            </p>
-        </div>
+    <span className="timestamp"> {props.timestamp} </span>    
     );
-}
+  }
 
-
-
-export default TimeStamp;
+  export default Timestamp;

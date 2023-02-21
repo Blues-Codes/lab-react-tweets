@@ -1,18 +1,11 @@
-import React from 'react';
 
-function User(userData) {
-    return (
-      <div className="userData">
-        <p>
-          {props.tweet.user}
-        </p>
-        <p>
-           {props.tweet.handle}
-        </p>
-        <br />
-      </div>
+function User(props) {
+    return  (
+        <div>
+            <span className="name">{props.user.name}</span>
+            <span className="handle">{props.user.handle}</span>
+        </div>
     );
-  }
-
+ }
 
 export default User;

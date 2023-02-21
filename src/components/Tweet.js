@@ -1,4 +1,7 @@
 import React from 'react';
+import ProfileImage from "./components/ProfileImage";
+import User from "./components/User";
+import TimeStamp from "./components/Timestamp";
 
 function Tweet(props) {
   return (
@@ -7,27 +10,15 @@ function Tweet(props) {
 
       <div className="body">
 
-        
+
         <div className="top">
-          <span className="user">
-            <span className="name">{props.tweet.user.name}</span>
-            <span className="handle">{props.tweet.user.handle}</span>
-          </span>
+          <User user={props.tweet.user} />
+          <Timestamp timestamp={props.tweet.timestamp} /> 
+       </div>
 
-          <span className="timestamp">{props.tweet.timestamp}</span>
-        </div>
+       <Message message={props.tweet.message} />
 
-        <p className="message">
-          {props.tweet.message}
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>

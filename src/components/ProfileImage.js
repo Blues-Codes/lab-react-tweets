@@ -1,12 +1,11 @@
-import React from 'react';
 
-function ProfileImage (image) {
-     return (
-        <div>
-            <image src="https://i.imgur.com/b0EdHVV.jpg" alt="PFP" className='profile'/>
-        </div>
-    );
-}
+
+function ProfileImage(props) {
+    return  (
+     <img src={props.image} className="profile" alt="profile"/>
+    )
+ 
+ }
 
 
 
